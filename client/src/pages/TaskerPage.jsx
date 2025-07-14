@@ -27,7 +27,9 @@ const TaskerPage = () => {
       <Navbar />
 
       <section className="px-[32px] mt-[32px] max-w-[1200px] mx-auto space-y-8">
-        <h2 className="text-[32px] font-bold text-gray-800">Explore Jobs</h2>
+        <h2 className="text-[32px] font-bold text-gray-800 text-center">
+          Explore Jobs
+        </h2>
 
         <div className="flex flex-wrap gap-4 justify-center items-center">
           <select className="px-8 py-2 rounded-[8px] bg-white border text-sm">
