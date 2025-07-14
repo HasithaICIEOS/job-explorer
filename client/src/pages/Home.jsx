@@ -1,8 +1,14 @@
 import React from "react";
-import heroImage from "../assets/images/hero-image.png";
 import Navbar from "../components/Navbar";
 import FeatureCard from "../components/FeatureCard";
 import HowItWorks from "../components/Howitworks";
+import HeroSection from "../components/HeroSection";
+import QAAccordion from "../components/QAAccordion";
+
+import heroImage from "../assets/images/hero-image.png";
+import readyToWorkImage from "../assets/images/ready-to-work.gif";
+import Footer from "../components/Footer";
+import TestimonialSection from "../components/TestimonialSection";
 
 const Home = () => {
   return (
@@ -13,36 +19,16 @@ const Home = () => {
           <div className=" mx-auto ml-40 mr-40 space-y-[32px]">
             {/* Navbar */}
             <Navbar />
-
             {/* Hero Section */}
-            <div className="relative w-full h-[650px] mt-[48px] rounded-[24px] overflow-hidden shadow">
-              {/* Background Image */}
-              <img
-                src={heroImage}
-                alt="Hero"
-                className="w-full h-full object-cover object-center"
-              />
-
-              {/* Overlay Content */}
-              <div className="absolute inset-0 flex items-center bg-gradient-to-r from-black/60 via-black/40 to-black/20 px-[70px]">
-                <div className=" max-w-[480px] space-y-[40px]">
-                  <p className="text-[42px] font-bold text-main_yellow leading-tight">
-                    Unlock Your Potential as a Skilled Professional
-                  </p>
-                  <h1 className="text-main_white text-[17px] leading-[24px] font-light">
-                    Join a community of experts and connect with clients <br />
-                    looking for your unique skills. Secure payments,
-                    <br /> flexible work hours, and a user-friendly dashboard
-                    <br /> make it easier than ever to grow your career.
-                  </h1>
-                  <button className="bg-main_yellow hover:bg-main_white font-medium text-[16px] px-[60px] py-[12px] rounded-[8px] transition">
-                    Find a Job
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* ⬇️ Future sections can also be added here and will stay inside the same column */}
+            <HeroSection
+              image={heroImage}
+              heading={"Unlock Your Potential as a Skilled Professional"}
+              description={
+                "Join a community of experts and connect with clients\n looking for your unique skills. Secure payments,‍‍\nflexible work hours, and a user-friendly dashboard\n make it easier than ever to grow your career."
+              }
+              color={"text-main_yellow"}
+              buttonBg={"bg-main_yellow"}
+            />
           </div>
         </section>
         <section className="w-full px-[32px] mt-[200px] mb-30">
@@ -91,6 +77,48 @@ const Home = () => {
         </section>
       </div>
       <HowItWorks />
+      <TestimonialSection />
+
+      <div className="bg-light_gray min-h-screen border border-light_gray">
+        <section className=" w-full px-[32px] mt-[88px]">
+          <div className=" mx-auto mb-10 ml-40 mr-40 space-y-[32px]">
+            <HeroSection
+              image={readyToWorkImage}
+              heading={"Are You Ready To Work With Us Now?"}
+              description={
+                "Join a community of experts and connect with clients\n looking for your unique skills. Secure payments,\n flexible work hours, and a user-friendly dashboard\n make it easier than ever to grow your career."
+              }
+              color={"text-light_yellow"}
+              buttonBg={"bg-light_yellow"}
+            />
+          </div>
+        </section>
+        <section className=" w-full px-[32px] mt-[48px] mb-20">
+          <div className=" mx-auto ml-40 mr-40 space-y-[12px]">
+            <QAAccordion
+              question="What is GREE LOGIX and why is it the best website builder?"
+              answer="GREE LOGIX is a modern web platform that allows users to easily build responsive, high-performing websites without coding. It offers secure hosting, drag-and-drop tools, and excellent support."
+            />
+            <QAAccordion
+              question="What is GREE LOGIX and why is it the best website builder?"
+              answer="GREE LOGIX is a modern web platform that allows users to easily build responsive, high-performing websites without coding. It offers secure hosting, drag-and-drop tools, and excellent support."
+            />
+            <QAAccordion
+              question="What is GREE LOGIX and why is it the best website builder?"
+              answer="GREE LOGIX is a modern web platform that allows users to easily build responsive, high-performing websites without coding. It offers secure hosting, drag-and-drop tools, and excellent support."
+            />
+            <QAAccordion
+              question="What is GREE LOGIX and why is it the best website builder?"
+              answer="GREE LOGIX is a modern web platform that allows users to easily build responsive, high-performing websites without coding. It offers secure hosting, drag-and-drop tools, and excellent support."
+            />
+            <QAAccordion
+              question="What is GREE LOGIX and why is it the best website builder?"
+              answer="GREE LOGIX is a modern web platform that allows users to easily build responsive, high-performing websites without coding. It offers secure hosting, drag-and-drop tools, and excellent support."
+            />
+          </div>
+        </section>
+        <Footer />
+      </div>
     </>
   );
 };
